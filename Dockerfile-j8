@@ -1,0 +1,4 @@
+FROM openjdk:8
+RUN mkdir -p /root/.gradle/ && mkdir /gradlecache && ln -s /gradlecache/caches /root/.gradle/caches && ln -s /gradlecache/wrapper /root/.gradle/wrapper 
+VOLUME [/gradlecache]
+WORKDIR /root/
